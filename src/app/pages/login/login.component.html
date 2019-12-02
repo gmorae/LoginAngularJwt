@@ -1,0 +1,9 @@
+<div class="container col-6">
+    <form class="text-center p-5" action="#!">
+        <p class="h4 mb-4">Login</p>
+        <input type="text" id="name" [(ngModel)]="user.name" name="name" class="form-control mb-4" placeholder="Name">
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" class="form-control mb-4"
+            placeholder="Password">
+        <button class="btn btn-info my-4" (click)="fazerLogin()" type="submit">Sign in</button>
+    </form>
+</div>
