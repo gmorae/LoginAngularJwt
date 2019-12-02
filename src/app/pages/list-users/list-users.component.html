@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="text-center mt-5">
+        List of users
+    </h1>
+    <div class="mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">CreatedAt</th>
+                <th scope="col">Name</th>
+                <th scope="col">Password</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of user">
+                <th>{{item.id}}</th>
+                <td>{{item.createdAt | date : 'dd/MM/yyyy'}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.password}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
