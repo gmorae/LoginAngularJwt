@@ -1,0 +1,100 @@
+<div class="container my-5 py-5 ">
+    <section class="px-md-5 mx-md-5 text-lg-left dark-grey-text">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="#!">
+                    <p class="h4 mb-4">Cadastro de usuario</p>
+
+                    <div class="form-row mb-4">
+                        <div class="col-8">
+                            <input type="text" class="form-control" placeholder="Razão social">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control" placeholder="CNPJ / CPF">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nome comercial / fantasia">
+                        </div>
+                    </div>
+                    <div class="form-row mb-4">
+                        <div class="col-4">
+                            <input type="text" class="form-control" placeholder="CEP">
+                        </div>
+                        <div class="col-8">
+                            <input type="text" class="form-control" placeholder="Endereço">
+                        </div>
+                    </div>
+                    <div class="form-row mb-4">
+                        <div class="col-2">
+                            <input type="text" class="form-control" placeholder="numero">
+                        </div>
+                        <div class="col-2">
+                            <input type="text" class="form-control" placeholder="complemento">
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control" placeholder="bairro">
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control" placeholder="cidade">
+                        </div>
+                        <div class="col-2">
+                            <input type="text" class="form-control" placeholder="uf">
+                        </div>
+                    </div>
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Telefone">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="E-mail">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Site">
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <h3>Cadastro do responsavel</h3>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-10">
+                            <div class="form-row mb-4">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Nome completo">
+                                </div>
+                            </div>
+                            <div class="form-row mb-4">
+                                <div class="col-4">
+                                    <input type="text" class="form-control" placeholder="Telefone">
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="E-mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="defaultUnchecked"
+                                    name="defaultExampleRadios" checked>
+                                <label class="custom-control-label" for="defaultUnchecked">Masculino</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="defaultChecked"
+                                    name="defaultExampleRadios">
+                                <label class="custom-control-label" for="defaultChecked">Feminino</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-grey my-4" [routerLink]="['/login']" type="submit">Cancelar</button>
+                        <button class="btn btn-info my-4 ml-auto" type="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
