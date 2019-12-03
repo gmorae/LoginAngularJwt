@@ -13,4 +13,8 @@ export class ApiService {
   listUser() : Observable<any>{
     return this.http.get(environment.api)
   }
+
+  post(dados : Users){
+    return this.http.post(environment.api, dados)
+  }
 }

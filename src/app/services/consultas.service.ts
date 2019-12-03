@@ -18,8 +18,16 @@ export class ConsultasService {
     this.api.listUser().subscribe(
       (user: Users[]) => {
         this.user = user
-        this.pegaRetorno$.next(true)     
+        this.pegaRetorno$.next(true)
       }
     )
+  }
+
+  post(body: Users) {
+    this.api.post(body).subscribe(() => {
+      console.log("sucesso");
+    }, err => {
+      console.log("erro");
+    })
   }
 }

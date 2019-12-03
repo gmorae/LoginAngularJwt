@@ -2,89 +2,88 @@
     <section class="px-md-5 mx-md-5 text-lg-left dark-grey-text">
         <div class="row">
             <div class="col-md-12">
-                <form action="#!">
+                <form [formGroup]="formUser" (ngSubmit)="onSubmit()">
                     <p class="h4 mb-4">Cadastro de usuario</p>
 
                     <div class="form-row mb-4">
                         <div class="col-8">
-                            <input type="text" class="form-control" placeholder="Razão social">
+                            <input type="text" class="form-control" placeholder="Razão social" formControlName="razaoSocial">
                         </div>
                         <div class="col-4">
-                            <input type="text" class="form-control" placeholder="CNPJ / CPF">
+                            <input type="text" class="form-control" placeholder="CNPJ / CPF" formControlName="cnpjOrCpf">
                         </div>
                     </div>
 
                     <div class="form-row mb-4">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Nome comercial / fantasia">
+                            <input type="text" class="form-control" placeholder="Nome comercial / fantasia" formControlName="name">
                         </div>
                     </div>
                     <div class="form-row mb-4">
                         <div class="col-4">
-                            <input type="text" class="form-control" placeholder="CEP">
+                            <input type="text" class="form-control" placeholder="CEP" formControlName="cep">
                         </div>
                         <div class="col-8">
-                            <input type="text" class="form-control" placeholder="Endereço">
+                            <input type="text" class="form-control" placeholder="Endereço" formControlName="endereco">
                         </div>
                     </div>
                     <div class="form-row mb-4">
                         <div class="col-2">
-                            <input type="text" class="form-control" placeholder="numero">
+                            <input type="text" class="form-control" placeholder="numero" formControlName="numero">
                         </div>
                         <div class="col-2">
-                            <input type="text" class="form-control" placeholder="complemento">
+                            <input type="text" class="form-control" placeholder="complemento" formControlName="complemento">
                         </div>
                         <div class="col-3">
-                            <input type="text" class="form-control" placeholder="bairro">
+                            <input type="text" class="form-control" placeholder="bairro" formControlName="bairro">
                         </div>
                         <div class="col-3">
-                            <input type="text" class="form-control" placeholder="cidade">
+                            <input type="text" class="form-control" placeholder="cidade" formControlName="cidade">
                         </div>
                         <div class="col-2">
-                            <input type="text" class="form-control" placeholder="uf">
+                            <input type="text" class="form-control" placeholder="uf" formControlName="uf">
                         </div>
                     </div>
                     <div class="form-row mb-4">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Telefone">
+                            <input type="text" class="form-control" placeholder="Telefone" formControlName="telefone">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="E-mail">
+                            <input type="text" class="form-control" placeholder="E-mail" formControlName="email">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Site">
+                            <input type="text" class="form-control" placeholder="Site" formControlName="site">
                         </div>
                     </div>
                     <div class="my-3">
                         <h3>Cadastro do responsavel</h3>
                     </div>
                     <div class="row">
-
                         <div class="col-10">
                             <div class="form-row mb-4">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Nome completo">
+                                    <input type="text" class="form-control" placeholder="Nome completo" formControlName="nomeResponsavel">
                                 </div>
                             </div>
                             <div class="form-row mb-4">
                                 <div class="col-4">
-                                    <input type="text" class="form-control" placeholder="Telefone">
+                                    <input type="text" class="form-control" placeholder="Telefone" formControlName="telefoneResponsavel">
                                 </div>
                                 <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="E-mail">
+                                    <input type="text" class="form-control" placeholder="E-mail" formControlName="emailResponsavel">
                                 </div>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="custom-control custom-radio">
                                 <input type="radio" class="custom-control-input" id="defaultUnchecked"
-                                    name="defaultExampleRadios" checked>
+                                    name="sexo" value="Masculino"formControlName="sexo" checked>
                                 <label class="custom-control-label" for="defaultUnchecked">Masculino</label>
                             </div>
 
                             <div class="custom-control custom-radio">
                                 <input type="radio" class="custom-control-input" id="defaultChecked"
-                                    name="defaultExampleRadios">
+                                    name="sexo" value="Feminino"formControlName="sexo">
                                 <label class="custom-control-label" for="defaultChecked">Feminino</label>
                             </div>
                         </div>
