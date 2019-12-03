@@ -1,6 +1,7 @@
 export class Users {
     // usuario comun
     id: number;
+    imgPerfil: string;
     createdAt: Date = new Date();
     name: string;
     password: string;
@@ -15,8 +16,9 @@ export class Users {
     uf: string;
     telefone: number;
     email: string;
-    site: string
-    sexo: string
+    site: string;
+    sexo: string;
+    upload: string;
 
     // responsavel
     nomeResponsavel: string;

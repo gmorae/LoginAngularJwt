@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators, MaxLengthValidator } from '@angular/forms';
 import { Users } from 'src/app/models/user.model';
 import { ConsultasService } from 'src/app/services/consultas.service';
 @Component({
@@ -9,7 +9,7 @@ import { ConsultasService } from 'src/app/services/consultas.service';
 })
 export class CadastroComponent implements OnInit {
   formUser: FormGroup;
-
+  user: Users = new Users()
   constructor(
     private form: FormBuilder, 
     private consulta: ConsultasService
@@ -21,28 +21,33 @@ export class CadastroComponent implements OnInit {
 
   createForm(user: Users) {
     this.formUser = this.form.group({
-      name: [user.name, Validators.required],
-      razaoSocial: [user.RazaoSocial, Validators.required],
-      cnpjOrCpf: [user.cnpjOrCpf, Validators.required],
-      cep: [user.cep, Validators.required],
-      endereco: [user.endereco, Validators.required],
-      numero: [user.numero, Validators.required],
-      complemento: [user.complemento, Validators.required],
-      bairro: [user.bairro, Validators.required],
-      cidade: [user.cidade, Validators.required],
-      uf: [user.uf, Validators.required],
-      telefone: [user.telefone, Validators.required],
-      email: [user.email, Validators.required],
-      site: [user.site, Validators.required],
-      sexo: [user.sexo, Validators.required],
-      nomeResponsavel: [user.nomeResponsavel, Validators.required],
-      telefoneResponsavel: [user.telefoneResponsavel, Validators.required],
-      emailResponsavel: [user.emailResponsavel, Validators.required],
+
+      imgPerfil:            [null, Validators.required],
+      name:                 [null, Validators.required],
+      razaoSocial:          [null, Validators.required],
+      cnpjOrCpf:            [null, [Validators.required, Validators.maxLength(12)]],
+      cep:                  [null, Validators.required],
+      endereco:             [null, Validators.required],
+      numero:               [null, Validators.required],
+      complemento:          [null, Validators.required],
+      bairro:               [null, Validators.required],
+      cidade:               [null, Validators.required],
+      uf:                   [null, Validators.required],
+      telefone:             [null, Validators.required],
+      email:                [null, [Validators.required, Validators.email]],
+      site:                 [null, Validators.required],
+      sexo:                 [null, Validators.required],
+      upload:               [null, Validators.required],
+      nomeResponsavel:      [null, Validators.required],
+      telefoneResponsavel:  [null, Validators.required],
+      emailResponsavel:     [null, Validators.required],     
+      
     })
   }
-
+  
   onSubmit() {
-    this.consulta.post(this.formUser.value)
+    this.user = this.formUser.value    
+    this.consulta.post(this.user)
     this.formUser.reset(new Users());
   }
 

@@ -4,19 +4,21 @@
             <div class="col-md-12">
                 <form [formGroup]="formUser" (ngSubmit)="onSubmit()">
                     <p class="h4 mb-4">Cadastro de usuario</p>
-
+                    <input type="file" name="" id="" formControlName="imgPerfil">
                     <div class="form-row mb-4">
                         <div class="col-8">
-                            <input type="text" class="form-control" placeholder="Razão social" formControlName="razaoSocial">
+                            <input type="text" class="form-control" placeholder="Razão social"
+                                formControlName="razaoSocial">
                         </div>
                         <div class="col-4">
-                            <input type="text" class="form-control" placeholder="CNPJ / CPF" formControlName="cnpjOrCpf">
+                            <input type="text" class="form-control" placeholder="CNPJ / CPF"
+                                formControlName="cnpjOrCpf">
                         </div>
                     </div>
-
                     <div class="form-row mb-4">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Nome comercial / fantasia" formControlName="name">
+                            <input type="text" class="form-control" placeholder="Nome comercial / fantasia"
+                                formControlName="name">
                         </div>
                     </div>
                     <div class="form-row mb-4">
@@ -32,7 +34,8 @@
                             <input type="text" class="form-control" placeholder="numero" formControlName="numero">
                         </div>
                         <div class="col-2">
-                            <input type="text" class="form-control" placeholder="complemento" formControlName="complemento">
+                            <input type="text" class="form-control" placeholder="complemento"
+                                formControlName="complemento">
                         </div>
                         <div class="col-3">
                             <input type="text" class="form-control" placeholder="bairro" formControlName="bairro">
@@ -62,35 +65,41 @@
                         <div class="col-10">
                             <div class="form-row mb-4">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Nome completo" formControlName="nomeResponsavel">
+                                    <input type="text" class="form-control" placeholder="Nome completo"
+                                        formControlName="nomeResponsavel">
                                 </div>
                             </div>
                             <div class="form-row mb-4">
                                 <div class="col-4">
-                                    <input type="text" class="form-control" placeholder="Telefone" formControlName="telefoneResponsavel">
+                                    <input type="text" class="form-control" placeholder="Telefone"
+                                        formControlName="telefoneResponsavel">
                                 </div>
                                 <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="E-mail" formControlName="emailResponsavel">
+                                    <input type="text" class="form-control" placeholder="E-mail"
+                                        formControlName="emailResponsavel">
                                 </div>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="defaultUnchecked"
-                                    name="sexo" value="Masculino"formControlName="sexo" checked>
+                                <input type="radio" class="custom-control-input" id="defaultUnchecked" name="sexo"
+                                    value="Masculino" formControlName="sexo" checked>
                                 <label class="custom-control-label" for="defaultUnchecked">Masculino</label>
                             </div>
 
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input" id="defaultChecked"
-                                    name="sexo" value="Feminino"formControlName="sexo">
+                                <input type="radio" class="custom-control-input" id="defaultChecked" name="sexo"
+                                    value="Feminino" formControlName="sexo">
                                 <label class="custom-control-label" for="defaultChecked">Feminino</label>
                             </div>
                         </div>
+                        <div class="col">
+                            <input type="file" class="form-control" placeholder="arquivo" formControlName="upload">
+                        </div>
                     </div>
                     <div class="row">
-                        <button class="btn btn-grey my-4" [routerLink]="['/login']" type="submit">Cancelar</button>
-                        <button class="btn btn-info my-4 ml-auto" type="submit">Cadastrar</button>
+                        <button class="btn btn-grey my-4" [routerLink]="['/']" type="submit">Cancelar</button>
+                        <button class="btn btn-info my-4 ml-auto"  type="submit">Cadastrar</button>
                     </div>
                 </form>
             </div>
