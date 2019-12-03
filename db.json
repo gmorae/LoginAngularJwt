@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "createdAt": "2019-12-02T10:57:52.417Z",
+            "name": "name",
+            "password": "password",
+            "id_tipo": 5
+        },
+        {
+            "id": "2",
+            "createdAt": "2019-12-01T20:06:41.977Z",
+            "name": "name",
+            "password": "password",
+            "id_tipo": 4
+        },
+        {
+            "id": "3",
+            "createdAt": "2019-12-01T23:18:47.420Z",
+            "name": "name",
+            "password": "password",
+            "id_tipo": 3
+        },
+        {
+            "id": "4",
+            "createdAt": "2019-12-01T22:19:12.935Z",
+            "name": "name",
+            "password": "password",
+            "id_tipo": 2
+        },
+        {
+            "id": "5",
+            "createdAt": "2019-12-02T10:00:19.133Z",
+            "name": "name",
+            "password": "password",
+            "id_tipo": 1
+        }
+    ]
+}
